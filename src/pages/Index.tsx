@@ -1,12 +1,60 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import Sidebar from "@/components/layout/Sidebar";
+import HeroSection from "@/components/sections/HeroSection";
+import DashboardSection from "@/components/sections/DashboardSection";
+import ScholarshipsSection from "@/components/sections/ScholarshipsSection";
+import ApplicationsSection from "@/components/sections/ApplicationsSection";
+import ProfileSection from "@/components/sections/ProfileSection";
+import MentorsSection from "@/components/sections/MentorsSection";
 
 const Index = () => {
+  const [showHero, setShowHero] = useState(true);
+  const [activeTab, setActiveTab] = useState("dashboard");
+
+  const handleGetStarted = () => {
+    setShowHero(false);
+  };
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case "dashboard":
+        return <DashboardSection />;
+      case "scholarships":
+        return <ScholarshipsSection />;
+      case "applications":
+        return <ApplicationsSection />;
+      case "profile":
+        return <ProfileSection />;
+      case "mentors":
+        return <MentorsSection />;
+      default:
+        return <DashboardSection />;
+    }
+  };
+
+  if (showHero) {
+    return <HeroSection onGetStarted={handleGetStarted} />;
+  }
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
+      
+      {/* Main Content - responsive margin for collapsed sidebar */}
+      <main className="ml-20 lg:ml-64 p-4 md:p-8 transition-all duration-300">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+          >
+            {renderContent()}
+          </motion.div>
+        </AnimatePresence>
+      </main>
     </div>
   );
 };
