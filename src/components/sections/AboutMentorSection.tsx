@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Linkedin, Instagram, Mail, Youtube, GraduationCap, Briefcase, Target, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import mentorImage from "@/assets/mentor-jaisal.png";
 
 const AboutMentorSection = () => {
   const socialLinks = [
@@ -26,9 +27,11 @@ const AboutMentorSection = () => {
               About Me
             </h2>
             <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white text-2xl font-bold">
-                JA
-              </div>
+              <img 
+                src={mentorImage} 
+                alt="Jaisal Ashraf" 
+                className="w-24 h-24 rounded-full object-cover border-4 border-primary/20 shadow-lg"
+              />
               <div className="text-left">
                 <h3 className="text-2xl font-bold text-foreground">Jaisal Ashraf</h3>
                 <p className="text-muted-foreground">Lead ASIC Design & Verification Engineer at Nokia</p>
