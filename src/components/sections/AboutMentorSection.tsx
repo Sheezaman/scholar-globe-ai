@@ -46,7 +46,7 @@ const AboutMentorSection = () => {
             className="bg-card rounded-2xl p-8 border border-border shadow-card mb-8"
           >
             <p className="text-lg text-foreground leading-relaxed">
-              I am an engineer, mentor, and global education advocate focused on building independent pathways to world-class education. My journey—from a non-traditional academic background in Kerala to leading engineering teams in Europe—has shaped my belief that <span className="text-primary font-semibold">access to opportunity should be driven by strategy, not privilege.</span>
+              I am an engineer and mentor focused on building independent pathways to world-class education. My journey—from a non-traditional academic background in Kerala to leading engineering teams in Europe—has shaped my belief that <span className="text-primary font-semibold">access to opportunity should be driven by strategy, not privilege.</span>
             </p>
           </motion.div>
 
