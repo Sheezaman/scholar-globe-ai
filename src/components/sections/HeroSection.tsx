@@ -46,8 +46,8 @@ const HeroSection = ({ onGetStarted }: HeroSectionProps) => {
           </h1>
 
           <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Find your perfect scholarship match with AI-powered recommendations 
-            and expert mentorship.
+            Find your perfect scholarship match with mentor-powered recommendations 
+            and expert guidance.
           </p>
 
           {/* CTA Buttons */}
