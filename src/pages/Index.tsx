@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Sidebar from "@/components/layout/Sidebar";
 import HeroSection from "@/components/sections/HeroSection";
+import AboutMentorSection from "@/components/sections/AboutMentorSection";
 import DashboardSection from "@/components/sections/DashboardSection";
 import ScholarshipsSection from "@/components/sections/ScholarshipsSection";
 import ApplicationsSection from "@/components/sections/ApplicationsSection";
@@ -34,7 +35,12 @@ const Index = () => {
   };
 
   if (showHero) {
-    return <HeroSection onGetStarted={handleGetStarted} />;
+    return (
+      <>
+        <HeroSection onGetStarted={handleGetStarted} />
+        <AboutMentorSection />
+      </>
+    );
   }
 
   return (
