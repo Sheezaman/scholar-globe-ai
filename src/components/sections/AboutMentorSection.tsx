@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Linkedin, Instagram, Mail, Youtube, GraduationCap, Briefcase, Target, Heart } from "lucide-react";
+import { Linkedin, Instagram, Mail, Youtube, GraduationCap, Globe, Target, Heart, Compass } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import mentorImage from "@/assets/mentor-jaisal.png";
 
@@ -49,11 +49,11 @@ const AboutMentorSection = () => {
             className="bg-card rounded-2xl p-8 border border-border shadow-card mb-8"
           >
             <p className="text-lg text-foreground leading-relaxed">
-              I am an engineer and mentor focused on building independent pathways to world-class education. My journey—from a non-traditional academic background in Kerala to leading engineering teams in Europe—has shaped my belief that <span className="text-primary font-semibold">access to opportunity should be driven by strategy, not privilege.</span>
+              I am an engineer and mentor who believes that <span className="text-primary font-semibold">where you start does not define how far you can go.</span> My journey—from being a below-average student in Kerala to becoming a lead engineer in Europe—has shaped my mission to help students access global education independently and ethically.
             </p>
           </motion.div>
 
-          {/* Background */}
+          {/* My Journey */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -63,29 +63,30 @@ const AboutMentorSection = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                <GraduationCap className="w-5 h-5 text-primary" />
+                <Compass className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-foreground">Background</h3>
+              <h3 className="text-xl font-bold text-foreground">My Journey</h3>
             </div>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                I began my academic journey in Kerala, where I rebuilt my foundation through discipline and self-directed learning. I chose the polytechnic route to remain financially independent, earning <span className="text-foreground font-medium">state rank (2nd) in Biomedical Engineering</span> before entering Government Model Engineering College (MEC), Kochi through lateral entry.
+                I grew up in Kozhikode, Kerala, where academics were not my strength in my early school years. I was more focused on cricket and even represented my district at the selection level. Everything changed in 8th grade when I realised that education was essential for building a stable and meaningful future.
               </p>
               <p>
-                Professionally, I worked with <span className="text-foreground font-medium">Broadcom and Intel</span> before pursuing advanced studies abroad. After extensive global applications and repeated rejections, I secured the <span className="text-primary font-semibold">EIT Digital Master School Scholarship</span>, a fully funded dual Master's program in Embedded Systems.
+                With no formal guidance, I relied on self-discipline and consistency to rebuild my academic foundation. This effort helped me score <span className="text-foreground font-medium">82.5% in my Class 10 examinations</span> and emerge as one of the top performers in Biology.
               </p>
-              <p>I completed my studies at:</p>
-              <ul className="list-disc list-inside ml-4 space-y-1">
-                <li><span className="text-foreground font-medium">KTH Royal Institute of Technology, Sweden</span></li>
-                <li><span className="text-foreground font-medium">Aalto University, Finland</span></li>
-              </ul>
               <p>
-                The program covered full tuition and provided a monthly stipend, enabling a <span className="text-primary font-semibold">debt-free education</span>.
+                To reduce financial pressure on my family, I chose a practical and independent path by pursuing a Diploma in Biomedical Engineering, where I secured <span className="text-primary font-semibold">2nd rank in the state</span>. Alongside my studies, I supported myself by teaching mathematics to higher secondary students.
+              </p>
+              <p>
+                Through lateral entry, I joined <span className="text-foreground font-medium">Government Model Engineering College (MEC), Kochi</span>, to study Electronics and Communication Engineering. Coming from a polytechnic background, I initially struggled with advanced mathematics, but through daily practice and mentorship from senior students, I bridged the gap. I also co-founded a technical group and actively participated in tech fests across Kerala, gaining valuable hands-on experience.
+              </p>
+              <p>
+                After graduation, I began my professional career at <span className="text-foreground font-medium">Broadcom</span>, later joining <span className="text-foreground font-medium">Intel</span>, while continuing to pursue my long-term goal of higher studies abroad. I applied to nearly 100 universities worldwide, facing repeated rejections before finally securing a breakthrough opportunity.
               </p>
             </div>
           </motion.div>
 
-          {/* Today */}
+          {/* My Global Journey */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -95,16 +96,24 @@ const AboutMentorSection = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
-                <Briefcase className="w-5 h-5 text-accent" />
+                <Globe className="w-5 h-5 text-accent" />
               </div>
-              <h3 className="text-xl font-bold text-foreground">Today</h3>
+              <h3 className="text-xl font-bold text-foreground">My Global Journey</h3>
             </div>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                I am currently a <span className="text-foreground font-medium">Lead ASIC Design & Verification Engineer at Nokia</span>, where I lead and mentor engineering teams. I am also a <span className="text-foreground font-medium">Finnish citizen</span>, reflecting long-term professional and cultural integration in Europe.
+                I was awarded the <span className="text-primary font-semibold">EIT Digital Master School Scholarship</span>, which offered me a fully funded dual Master's degree in Embedded Systems, covering full tuition and providing a monthly stipend of <span className="text-foreground font-medium">€1,000</span>.
+              </p>
+              <p className="font-medium text-foreground">My studies were completed at:</p>
+              <ul className="list-disc list-inside ml-4 space-y-1">
+                <li><span className="text-foreground font-medium">KTH Royal Institute of Technology, Sweden</span></li>
+                <li><span className="text-foreground font-medium">Aalto University, Finland</span></li>
+              </ul>
+              <p>
+                During my time in Finland, I focused on integrating fully—learning the Finnish language, adapting to the culture, and building professional networks. I secured an internship at <span className="text-foreground font-medium">Nokia</span>, which later converted into a full-time role.
               </p>
               <p>
-                Alongside my corporate role, I actively mentor students, helping them access global education through direct applications, scholarship-first strategies, and ethical guidance—<span className="text-primary font-semibold">without reliance on agencies or education loans</span>.
+                Today, I work as a <span className="text-foreground font-medium">Lead ASIC Design & Verification Engineer at Nokia</span>, where I manage and mentor a high-performing engineering team. I am also a <span className="text-primary font-semibold">Finnish citizen</span>, a milestone that reflects years of persistence, integration, and growth.
               </p>
             </div>
           </motion.div>
@@ -121,22 +130,28 @@ const AboutMentorSection = () => {
               <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                 <Target className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-foreground">Vision</h3>
+              <h3 className="text-xl font-bold text-foreground">My Vision</h3>
             </div>
-            <ul className="space-y-3 text-muted-foreground">
-              <li className="flex items-start gap-3">
-                <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                <span>Build awareness around <span className="text-foreground font-medium">independent, scholarship-driven global education</span></span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                <span>Enable students from <span className="text-foreground font-medium">non-elite backgrounds</span> to access top universities</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                <span>Replace misinformation and agency dependency with <span className="text-foreground font-medium">clarity, strategy, and self-reliance</span></span>
-              </li>
-            </ul>
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-lg font-semibold text-foreground mb-2">Empowering Independent Students</h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  I help students apply directly to universities without relying on agencies or consultancies that prioritise commissions over student outcomes.
+                </p>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-foreground mb-2">Scholarship-First Education</h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  I strongly advocate for funded scholarships over education loans and guide students on building strong profiles through projects, research, and competitions.
+                </p>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-foreground mb-2">Global Opportunities for Everyone</h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  I aim to show that students from polytechnics, tier-3 colleges, or non-traditional backgrounds can access top global universities with the right strategy and persistence.
+                </p>
+              </div>
+            </div>
           </motion.div>
 
           {/* Mission */}
@@ -154,7 +169,7 @@ const AboutMentorSection = () => {
               <h3 className="text-xl font-bold text-foreground">My Mission</h3>
             </div>
             <p className="text-lg text-foreground mb-6 leading-relaxed">
-              My mission is to help students access Scholarship education <span className="text-primary font-semibold">without agency fees, without education loans, and without falling victim to study-abroad scams.</span>
+              My mission is to help students access fully funded global education <span className="text-primary font-semibold">without agency fees, without education loans, and without falling victim to study-abroad scams.</span>
             </p>
             <p className="text-muted-foreground mb-4">I work to:</p>
             <ul className="space-y-3 text-muted-foreground mb-6">
@@ -175,9 +190,6 @@ const AboutMentorSection = () => {
                 <span>Promote a <span className="text-foreground font-medium">scholarship-first mindset</span> over debt-based education</span>
               </li>
             </ul>
-            <p className="text-foreground italic border-l-4 border-primary pl-4">
-              I believe global education should be transparent, ethical, and accessible, regardless of a student's background or financial status.
-            </p>
           </motion.div>
 
           {/* Get in Touch */}
