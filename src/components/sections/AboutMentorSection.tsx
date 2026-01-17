@@ -6,7 +6,7 @@ import mentorImage from "@/assets/mentor-jaisal.png";
 const AboutMentorSection = () => {
   const socialLinks = [
     { icon: Linkedin, href: "#", label: "LinkedIn", color: "hover:bg-[#0077B5]" },
-    { icon: Instagram, href: "#", label: "Instagram", color: "hover:bg-[#E4405F]" },
+    { icon: Instagram, href: "https://www.instagram.com/jaisal.ashraf?igsh=MW9lNHZyOW9pZ2p4Mw==", label: "Instagram", color: "hover:bg-[#E4405F]" },
     { icon: Mail, href: "mailto:jaisal@example.com", label: "Gmail", color: "hover:bg-[#EA4335]" },
     { icon: Youtube, href: "#", label: "YouTube", color: "hover:bg-[#FF0000]" },
   ];
