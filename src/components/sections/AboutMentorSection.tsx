@@ -128,9 +128,6 @@ const AboutMentorSection = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-right max-w-md ml-auto"
             >
-              <span className="inline-block px-4 py-2 rounded-full bg-muted/80 backdrop-blur-sm text-muted-foreground text-sm font-medium mb-4">
-                Education Expert & Mentor
-              </span>
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                 Jaisal<br />Ashraf
               </h1>
