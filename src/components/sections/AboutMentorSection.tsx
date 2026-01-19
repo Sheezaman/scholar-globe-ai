@@ -119,22 +119,19 @@ const AboutMentorSection = () => {
           </h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed text-base md:text-lg">
             <p>
-              I grew up in Kozhikode, Kerala, where academics were not my strength in my early years. I was an average student, more focused on cricket and even representing my district at the selection level. In the 8th grade, I realised that education was essential for building a stable and meaningful future, and I began rebuilding my academic foundation through discipline and consistency—without formal guidance.
+              Growing up in Kozhikode, Kerala, my early academic years did not reflect my potential. I was more focused on cricket and even represented my district at the selection level. In the 8th grade, I began to understand the role education plays in creating stability, independence, and long-term opportunity.
             </p>
             <p>
-              This effort helped me score 82.5% in my Class 10 examinations and become one of the top performers in Biology. To reduce financial pressure on my family, I pursued a Diploma in Biomedical Engineering, securing 2nd rank in the state, while supporting myself by teaching mathematics to higher secondary students.
+              With no formal guidance, I rebuilt my academic foundation through discipline and consistency. This helped me score 82.5% in Class 10 and emerge as one of the top performers in Biology. To reduce financial pressure on my family, I pursued a Diploma in Biomedical Engineering, securing 2nd rank in the state, while supporting myself by teaching mathematics.
             </p>
             <p>
-              Through lateral entry, I joined Government Model Engineering College (MEC), Kochi, to study Electronics and Communication Engineering. Coming from a polytechnic background, I initially struggled with advanced mathematics, but consistent practice and mentorship from senior students helped me bridge the gap. During this period, I co-founded a technical group, actively participated in tech fests across Kerala, and focused on gaining practical engineering experience.
+              Through lateral entry, I joined Government Model Engineering College (MEC), Kochi, to study Electronics and Communication Engineering. Coming from a polytechnic background, I initially faced challenges with advanced mathematics, but consistent practice and mentorship helped me bridge the gap. After graduation, I worked at Broadcom and Intel, while continuing to pursue higher studies abroad.
             </p>
             <p>
-              After graduation, I began my career at Broadcom and later joined Intel, while continuing to pursue higher studies abroad. After applying to nearly 100 universities and facing multiple rejections, I was awarded the EIT Digital Master School Scholarship, which fully funded my dual Master's degree in Embedded Systems.
+              I was awarded the EIT Digital Master School Scholarship, which fully funded my dual Master's degree in Embedded Systems at KTH Royal Institute of Technology, Sweden, and Aalto University, Finland. During my time in Finland, I focused on integration, leading to an internship at Nokia and eventually a full-time role.
             </p>
             <p>
-              I completed my studies at KTH Royal Institute of Technology, Sweden, and Aalto University, Finland. While in Finland, I focused on integration—learning the language, adapting to the culture, and building professional networks—which led to an internship at Nokia and later a full-time role.
-            </p>
-            <p>
-              Today, I work as a Lead ASIC Design & Verification Engineer at Nokia, where I manage and mentor a high-performing engineering team. I am also a Finnish citizen, reflecting years of persistence, growth, and global integration.
+              Today, I work as a Lead ASIC Design & Verification Engineer at Nokia and am a Finnish citizen, reflecting years of persistence, growth, and global integration.
             </p>
           </div>
         </motion.div>
