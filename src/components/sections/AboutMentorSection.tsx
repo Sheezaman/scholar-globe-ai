@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Linkedin, Instagram, Mail, Youtube, Heart, GraduationCap, Globe, Target, Briefcase, Award, MapPin, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import mentorHeroImage from "@/assets/mentor-jaisal-hero.png";
 
 const AboutMentorSection = () => {
   const socialLinks = [
@@ -103,8 +104,43 @@ const AboutMentorSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-background">
-      <div className="container mx-auto px-6 max-w-4xl">
+    <section className="bg-background">
+      {/* Hero Section with Mentor Photo */}
+      <div className="relative w-full min-h-[60vh] md:min-h-[70vh] overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={mentorHeroImage}
+            alt="Jaisal Ashraf"
+            className="w-full h-full object-cover object-top"
+          />
+          {/* Gradient overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-background/90 md:to-background/80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+        </div>
+
+        {/* Content overlay */}
+        <div className="relative h-full min-h-[60vh] md:min-h-[70vh] flex items-center justify-end">
+          <div className="container mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-right max-w-md ml-auto"
+            >
+              <span className="inline-block px-4 py-2 rounded-full bg-muted/80 backdrop-blur-sm text-muted-foreground text-sm font-medium mb-4">
+                Education Expert & Mentor
+              </span>
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+                Jaisal<br />Ashraf
+              </h1>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+
+      {/* Content Sections */}
+      <div className="container mx-auto px-6 max-w-4xl py-16">
         
         {/* My Story */}
         <motion.div
