@@ -118,7 +118,7 @@ const ChatInterface = () => {
                   <Sparkles className="w-8 h-8 text-primary" />
                 </div>
                 <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-3">
-                  ScholarGlobe AI
+                  Your Mentor
                 </h1>
                 <p className="text-muted-foreground text-lg max-w-md mb-8">
                   Ask me anything about scholarships, eligibility, deadlines, or your chances.
@@ -196,7 +196,7 @@ const ChatInterface = () => {
             </Button>
           </div>
           <p className="text-xs text-muted-foreground text-center mt-2">
-            ScholarGlobe AI can help you find and apply for scholarships worldwide.
+            Your Mentor can help you find and apply for scholarships worldwide.
           </p>
         </div>
       </div>
