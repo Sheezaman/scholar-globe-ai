@@ -8,7 +8,8 @@ import {
   MessageSquare,
   Plus,
   Settings,
-  Globe
+  Globe,
+  Home
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -20,6 +21,7 @@ interface ChatSidebarProps {
 }
 
 const navItems = [
+  { id: "home", label: "Home", icon: Home },
   { id: "chat", label: "Chat", icon: MessageSquare },
   { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
   { id: "scholarships", label: "Scholarships", icon: GraduationCap },
