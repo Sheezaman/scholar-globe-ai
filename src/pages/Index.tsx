@@ -11,21 +11,15 @@ import ProfileSection from "@/components/sections/ProfileSection";
 import MentorsSection from "@/components/sections/MentorsSection";
 
 const Index = () => {
-  const [activeTab, setActiveTab] = useState("home");
+  const [showApp, setShowApp] = useState(false);
+  const [activeTab, setActiveTab] = useState("chat");
 
   const handleGetStarted = () => {
-    setActiveTab("chat");
+    setShowApp(true);
   };
 
   const renderContent = () => {
     switch (activeTab) {
-      case "home":
-        return (
-          <div className="h-full overflow-y-auto">
-            <HeroSection onGetStarted={handleGetStarted} />
-            <AboutMentorSection />
-          </div>
-        );
       case "chat":
         return <ChatInterface />;
       case "dashboard":
@@ -39,15 +33,21 @@ const Index = () => {
       case "mentors":
         return <MentorsSection />;
       default:
-        return (
-          <div className="h-full overflow-y-auto">
-            <HeroSection onGetStarted={handleGetStarted} />
-            <AboutMentorSection />
-          </div>
-        );
+        return <ChatInterface />;
     }
   };
 
+  // Show Hero + About section before user clicks Get Started
+  if (!showApp) {
+    return (
+      <div className="min-h-screen overflow-y-auto">
+        <HeroSection onGetStarted={handleGetStarted} />
+        <AboutMentorSection />
+      </div>
+    );
+  }
+
+  // Show main app with sidebar after Get Started
   return (
     <div className="min-h-screen h-screen bg-background flex">
       <ChatSidebar activeTab={activeTab} onTabChange={setActiveTab} />
