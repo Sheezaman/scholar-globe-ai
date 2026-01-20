@@ -21,7 +21,6 @@ interface ChatSidebarProps {
 }
 
 const navItems = [
-  { id: "home", label: "Home", icon: Home },
   { id: "chat", label: "Chat", icon: MessageSquare },
   { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
   { id: "scholarships", label: "Scholarships", icon: GraduationCap },
