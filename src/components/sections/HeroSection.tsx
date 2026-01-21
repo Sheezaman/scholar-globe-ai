@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Globe, ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import heroBg from "@/assets/hero-bg.jpg";
 
 interface HeroSectionProps {
@@ -18,6 +19,11 @@ const HeroSection = ({ onGetStarted }: HeroSectionProps) => {
       
       {/* Overlay */}
       <div className="absolute inset-0 hero-overlay" />
+
+      {/* Theme Toggle - Top Right */}
+      <div className="absolute top-6 right-6 z-20">
+        <ThemeToggle variant="button" className="bg-white/10 border-white/30 hover:bg-white/20 text-white" />
+      </div>
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
