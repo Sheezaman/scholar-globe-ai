@@ -47,13 +47,13 @@ const Index = () => {
     );
   }
 
-  // Show main app with sidebar after Get Started
+  // Show main app with top header after Get Started
   return (
-    <div className="min-h-screen h-screen bg-background flex">
+    <div className="min-h-screen h-screen bg-background flex flex-col">
       <ChatSidebar activeTab={activeTab} onTabChange={setActiveTab} />
       
-      {/* Main Content */}
-      <main className="ml-16 flex-1 h-screen overflow-hidden">
+      {/* Main Content - with top padding for fixed header */}
+      <main className="flex-1 pt-14 h-screen overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}

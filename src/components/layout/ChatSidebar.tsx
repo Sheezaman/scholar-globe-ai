@@ -5,14 +5,18 @@ import {
   FileText, 
   User, 
   Users, 
-  MessageSquare,
-  Plus,
+  Menu,
   Globe
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 interface ChatSidebarProps {
   activeTab: string;
@@ -20,7 +24,6 @@ interface ChatSidebarProps {
 }
 
 const navItems = [
-  { id: "chat", label: "Chat", icon: MessageSquare },
   { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
   { id: "scholarships", label: "Scholarships", icon: GraduationCap },
   { id: "applications", label: "Applications", icon: FileText },
@@ -30,68 +33,69 @@ const navItems = [
 
 const ChatSidebar = ({ activeTab, onTabChange }: ChatSidebarProps) => {
   return (
-    <motion.aside
-      initial={{ x: -20, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      className="fixed left-0 top-0 h-full w-16 bg-card border-r border-border z-50 flex flex-col"
+    <motion.header
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      className="fixed top-0 left-0 right-0 h-14 bg-background/80 backdrop-blur-md border-b border-border z-50 flex items-center justify-between px-4"
     >
-      {/* Logo */}
-      <div className="p-3 flex justify-center">
-        <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-          <Globe className="w-5 h-5 text-primary-foreground" />
+      {/* Left Section - Menu & Logo */}
+      <div className="flex items-center gap-2">
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="ghost" size="icon" className="rounded-full">
+              <Menu className="w-5 h-5" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="start" className="w-48">
+            {navItems.map((item) => {
+              const Icon = item.icon;
+              return (
+                <DropdownMenuItem
+                  key={item.id}
+                  onClick={() => onTabChange(item.id)}
+                  className={activeTab === item.id ? "bg-primary/10 text-primary" : ""}
+                >
+                  <Icon className="w-4 h-4 mr-2" />
+                  {item.label}
+                </DropdownMenuItem>
+              );
+            })}
+          </DropdownMenuContent>
+        </DropdownMenu>
+        
+        <div className="flex items-center gap-2 bg-secondary/50 rounded-full px-3 py-1.5">
+          <div className="w-6 h-6 rounded-lg bg-primary flex items-center justify-center">
+            <Globe className="w-3.5 h-3.5 text-primary-foreground" />
+          </div>
+          <span className="text-sm font-medium">ScholarGlobe</span>
         </div>
       </div>
 
-      {/* New Chat Button */}
-      <div className="px-2 py-2">
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Button
-              variant="outline"
-              size="icon"
-              className="w-full h-10 rounded-lg"
-              onClick={() => onTabChange("chat")}
-            >
-              <Plus className="w-4 h-4" />
-            </Button>
-          </TooltipTrigger>
-          <TooltipContent side="right">New Chat</TooltipContent>
-        </Tooltip>
-      </div>
-
-      <Separator className="mx-2 w-auto" />
-
-      {/* Navigation */}
-      <nav className="flex-1 p-2 space-y-1">
-        {navItems.map((item) => {
+      {/* Right Section - Quick Actions */}
+      <div className="flex items-center gap-1">
+        {navItems.slice(0, 3).map((item) => {
           const Icon = item.icon;
           const isActive = activeTab === item.id;
           
           return (
             <Tooltip key={item.id}>
               <TooltipTrigger asChild>
-                <button
+                <Button
+                  variant="ghost"
+                  size="icon"
                   onClick={() => onTabChange(item.id)}
-                  className={`w-full h-10 rounded-lg flex items-center justify-center transition-colors ${
-                    isActive 
-                      ? "bg-primary/10 text-primary" 
-                      : "text-muted-foreground hover:bg-secondary hover:text-foreground"
-                  }`}
+                  className={`rounded-full ${isActive ? "bg-primary/10 text-primary" : ""}`}
                 >
-                  <Icon className="w-5 h-5" />
-                </button>
+                  <Icon className="w-4 h-4" />
+                </Button>
               </TooltipTrigger>
-              <TooltipContent side="right">{item.label}</TooltipContent>
+              <TooltipContent>{item.label}</TooltipContent>
             </Tooltip>
           );
         })}
-      </nav>
-
-      {/* Bottom Actions */}
-      <div className="p-2 border-t border-border space-y-1">
         <ThemeToggle />
       </div>
-    </motion.aside>
+    </motion.header>
   );
 };
 
