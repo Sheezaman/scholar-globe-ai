@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Linkedin, Instagram, Mail, Youtube, Heart, GraduationCap, Globe, Target, Briefcase, Award, MapPin, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import mentorHeroImage from "@/assets/mentor-jaisal-hero.png";
+import MyStudentsSection from "./MyStudentsSection";
 
 const AboutMentorSection = () => {
   const socialLinks = [
@@ -242,7 +243,8 @@ const AboutMentorSection = () => {
           </div>
         </motion.div>
 
-        {/* My Journey - Timeline */}
+        {/* My Students Section */}
+        <MyStudentsSection />
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
