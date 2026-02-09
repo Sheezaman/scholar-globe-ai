@@ -6,7 +6,8 @@ import {
   User, 
   Users, 
   Menu,
-  Globe
+  Globe,
+  Video
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
@@ -27,6 +28,7 @@ const navItems = [
   { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
   { id: "scholarships", label: "Scholarships", icon: GraduationCap },
   { id: "applications", label: "Applications", icon: FileText },
+  { id: "webinars", label: "Webinars", icon: Video },
   { id: "profile", label: "Profile", icon: User },
   { id: "mentors", label: "Mentors", icon: Users },
 ];
