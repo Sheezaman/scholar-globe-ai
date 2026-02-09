@@ -9,6 +9,7 @@ import ScholarshipsSection from "@/components/sections/ScholarshipsSection";
 import ApplicationsSection from "@/components/sections/ApplicationsSection";
 import ProfileSection from "@/components/sections/ProfileSection";
 import MentorsSection from "@/components/sections/MentorsSection";
+import WebinarsSection from "@/components/sections/WebinarsSection";
 
 const Index = () => {
   const [showApp, setShowApp] = useState(false);
@@ -28,6 +29,8 @@ const Index = () => {
         return <ScholarshipsSection />;
       case "applications":
         return <ApplicationsSection />;
+      case "webinars":
+        return <WebinarsSection />;
       case "profile":
         return <ProfileSection />;
       case "mentors":
