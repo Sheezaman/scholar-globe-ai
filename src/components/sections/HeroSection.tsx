@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Globe, ArrowRight, Sparkles, Star, GraduationCap, BookOpen } from "lucide-react";
+import { Globe, ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -8,55 +8,37 @@ interface HeroSectionProps {
   onGetStarted: () => void;
 }
 
-const FloatingIcon = ({ icon: Icon, className, delay }: { icon: any; className: string; delay: number }) => (
-  <motion.div
-    initial={{ opacity: 0, scale: 0 }}
-    animate={{ opacity: 0.15, scale: 1 }}
-    transition={{ delay, duration: 1 }}
-    className={`absolute ${className}`}
-  >
-    <motion.div
-      animate={{ y: [0, -20, 0], rotate: [0, 10, -10, 0] }}
-      transition={{ duration: 6 + delay, repeat: Infinity, ease: "easeInOut" }}
-    >
-      <Icon className="w-10 h-10 md:w-14 md:h-14 text-white" />
-    </motion.div>
-  </motion.div>
-);
-
 const HeroSection = ({ onGetStarted }: HeroSectionProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
+      {/* Background Image with subtle zoom animation */}
+      <motion.div
+        initial={{ scale: 1.1 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 20, ease: "linear" }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
 
-      {/* Multi-layer Overlays */}
+      {/* Rich multi-layer overlays for depth */}
       <div className="absolute inset-0 hero-overlay" />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black/60" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[hsla(200,50%,15%,0.4)] via-transparent to-[hsla(180,40%,20%,0.3)]" />
 
-      {/* Animated grain/noise texture */}
-      <div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIzMDAiIGZpbHRlcj0idXJsKCNhKSIgb3BhY2l0eT0iMC4xIi8+PC9zdmc+')]" />
-
-      {/* Floating decorative icons */}
-      <FloatingIcon icon={Star} className="top-[15%] left-[8%]" delay={0.5} />
-      <FloatingIcon icon={GraduationCap} className="top-[20%] right-[10%]" delay={1} />
-      <FloatingIcon icon={BookOpen} className="bottom-[25%] left-[12%]" delay={1.5} />
-      <FloatingIcon icon={Globe} className="bottom-[20%] right-[8%]" delay={2} />
-
-      {/* Animated glowing orbs */}
+      {/* Animated aurora-like glow */}
       <motion.div
-        animate={{ scale: [1, 1.3, 1], opacity: [0.08, 0.15, 0.08] }}
-        transition={{ duration: 8, repeat: Infinity }}
-        className="absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-primary/20 blur-3xl"
+        animate={{ opacity: [0.06, 0.15, 0.06], x: [-40, 40, -40] }}
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-0 left-1/4 w-[600px] h-[600px] rounded-full bg-primary/30 blur-[120px]"
       />
       <motion.div
-        animate={{ scale: [1, 1.2, 1], opacity: [0.06, 0.12, 0.06] }}
-        transition={{ duration: 10, repeat: Infinity, delay: 2 }}
-        className="absolute bottom-1/4 -right-32 w-96 h-96 rounded-full bg-accent/20 blur-3xl"
+        animate={{ opacity: [0.04, 0.12, 0.04], x: [30, -30, 30] }}
+        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 3 }}
+        className="absolute bottom-0 right-1/4 w-[500px] h-[500px] rounded-full bg-accent/25 blur-[120px]"
       />
+
+      {/* Subtle vignette */}
+      <div className="absolute inset-0 shadow-[inset_0_0_200px_60px_rgba(0,0,0,0.4)]" />
 
       {/* Theme Toggle */}
       <div className="absolute top-6 right-6 z-20">
@@ -84,7 +66,7 @@ const HeroSection = ({ onGetStarted }: HeroSectionProps) => {
             <span className="text-white/90 text-sm font-medium tracking-wide">Discover Opportunities Worldwide</span>
           </motion.div>
 
-          {/* Main Heading with shimmer */}
+          {/* Main Heading */}
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight drop-shadow-2xl">
             <motion.span
               initial={{ opacity: 0, y: 20 }}
