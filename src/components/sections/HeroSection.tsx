@@ -129,30 +129,6 @@ const HeroSection = ({ onGetStarted }: HeroSectionProps) => {
             </Button>
           </motion.div>
 
-          {/* Stats Row */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.3 }}
-            className="flex flex-wrap justify-center gap-8 md:gap-16 mb-12"
-          >
-            {[
-              { value: "500+", label: "Scholarships" },
-              { value: "50+", label: "Countries" },
-              { value: "1000+", label: "Students Helped" },
-            ].map((stat, i) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.4 + i * 0.15 }}
-                className="text-center"
-              >
-                <p className="text-3xl md:text-4xl font-bold text-white font-serif">{stat.value}</p>
-                <p className="text-white/50 text-sm mt-1 tracking-wider uppercase">{stat.label}</p>
-              </motion.div>
-            ))}
-          </motion.div>
 
           {/* Mentor Credit */}
           <motion.div
