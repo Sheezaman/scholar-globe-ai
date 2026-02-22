@@ -47,38 +47,52 @@ const AboutMentorSection = () => {
       highlight: true
     },
     {
-      period: "Finland Phase",
-      location: "",
-      title: "Internship → Full-Time Engineer at Nokia",
-      description: "Focused on cultural integration, learning the Finnish language, and building strong professional networks. Secured an internship at Nokia, which later converted into a full-time role.",
+      period: "Master's Education",
+      location: "Finland",
+      title: "Aalto University School of Science and Technology",
+      description: "Studied at Finland's leading university for technology and innovation. Specialized in low-power embedded systems and completed research on ultra-low-power wake-up clock design for SoC applications.",
+      icon: GraduationCap
+    },
+    {
+      period: "Research",
+      location: "Sweden",
+      title: "Researcher – Ericsson",
+      description: "Worked in a research-driven environment applying embedded and communication system knowledge to real-world telecom technologies.",
       icon: Globe
     },
     {
       period: "Master's Education",
-      location: "Sweden & Finland",
+      location: "Sweden",
+      title: "KTH Royal Institute of Technology",
+      description: "Studied at one of Sweden's top technical universities, known globally for engineering and innovation. Strengthened expertise in embedded hardware systems and architecture.",
+      icon: GraduationCap
+    },
+    {
+      period: "Scholarship",
+      location: "",
       title: "EIT Digital Master School Scholar",
-      description: "Completed a fully funded dual Master's degree in Embedded Systems under the EIT Digital program. Studied at KTH Royal Institute of Technology, Sweden, and Aalto University, Finland, with full tuition coverage and a monthly stipend.",
+      description: "Recipient of a prestigious European scholarship awarded to outstanding students pursuing advanced studies in digital and embedded technologies. The scholarship provides full tuition fee coverage, monthly living stipend, international mobility opportunities, industry collaboration exposure, and access to a strong European innovation and startup ecosystem.",
       icon: Award
     },
     {
-      period: "Global Applications",
+      period: "Professional",
       location: "",
-      title: "Nearly 100 University Applications",
-      description: "Applied to universities worldwide, faced repeated rejections, and gained deep insight into global admissions strategy and persistence.",
-      icon: Target
+      title: "Physical Design Engineer – Intel",
+      description: "Contributed to advanced IC fabrication and chip layout design. Focused on optimizing space constraints and improving efficiency in microelectronics design.",
+      icon: Briefcase
     },
     {
-      period: "Professional Foundations",
+      period: "Professional",
       location: "",
-      title: "Broadcom → Intel",
-      description: "Built strong industry foundations while preparing for higher studies abroad.",
+      title: "Engineer – Broadcom",
+      description: "Worked on WiFi chip testing and performance analysis across multiple environments. Built strong expertise in hardware validation, power measurement, and system-level debugging.",
       icon: Briefcase
     },
     {
       period: "Engineering Degree",
-      location: "",
+      location: "Kochi",
       title: "Government Model Engineering College (MEC), Kochi",
-      description: "Completed BTech in Electronics and Communication Engineering through lateral entry. Overcame academic gaps through consistent practice and mentorship. Co-founded a technical group and actively participated in tech fests across Kerala.",
+      description: "Completed Electronics and Communication Engineering and built a strong technical foundation through hands-on learning and active participation in technical communities.",
       icon: GraduationCap
     },
     {
